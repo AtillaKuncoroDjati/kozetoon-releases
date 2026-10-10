@@ -8,6 +8,29 @@ publik terpisah.
 
 ## Perubahan versi ini
 
+**Penyempurnaan 11 Oktober 2026 — versi tetap 1.1.0, build 17:**
+
+- **Banner Cerita pilihan benar-benar bergeser** mengikuti swipe kiri/kanan,
+  dengan transisi 420 ms dan pergantian otomatis setiap 5 detik. Tombol panah
+  serta tombol titik untuk berpindah banner dihapus; indikator posisi tetap ada.
+  Pergantian dijeda ketika banner di luar layar, aplikasi di latar belakang atau
+  dialog terbuka. Gerakan vertikal tetap menggulir halaman.
+- **Penanda bacaan pada daftar chapter:** hijau dengan tanda centang untuk
+  chapter selesai dibaca, ungu dengan tulisan **Terakhir dibaca** untuk posisi
+  terakhir. Reader menampilkan **Sedang dibaca** pada chapter yang sedang dibuka.
+  Penanda memakai riwayat tersimpan sehingga tetap ada setelah aplikasi dibuka lagi.
+- **Pemeriksaan katalog lebih ringan:** indeks terbaru dibandingkan dengan ID
+  chapter yang sudah tersimpan. Cerita yang chapter terbarunya sudah ada tidak
+  diambil ulang hanya karena ada perbedaan metadata sampul/sinopsis. Manifest
+  gambar yang sudah siap dipertahankan; hanya chapter yang belum siap diambil.
+- Pemeriksaan mengikuti daftar yang diurutkan dari update terbaru, berhenti pada
+  halaman yang seluruh chapter terbarunya sudah dikenal. Antrean perubahan yang
+  belum selesai disimpan sebelum pengambilan detail dan dilanjutkan dari antrean
+  tersebut pada batch berikutnya. Pemeriksaan ringan tidak menampilkan spinner
+  pengambilan chapter, dan membuka ulang aplikasi tidak melewati jeda pemeriksaan.
+
+Fitur 1.1.0 berikut tetap tersedia:
+
 - **Memori lokal otomatis** di Documents/KOZETOON, tanpa akun Google: bookmark,
   riwayat, posisi di dalam gambar, chapter selesai dibaca, profil dan pengaturan.
 - **Salinan katalog terakhir** ikut disimpan: judul, metadata, daftar chapter,
@@ -33,7 +56,7 @@ tidak ditampilkan pada detail bacaan. Tidak ada login atau backup Google Drive.
 ## Memasang pembaruan
 
 Unduh APK dan pilih **Update**, menimpa aplikasi lama. Package `id.kozetoon.local`
-dan sertifikat tetap sama; versionCode 16. Seed awal tidak menimpa database lama.
+dan sertifikat tetap sama; versionCode 17. Seed awal tidak menimpa database lama.
 **Jangan uninstall dahulu** agar katalog terbaru, Library dan offline tetap ada.
 Sediakan sedikitnya 1 GB ruang kosong untuk operasi katalog dan backup.
 
@@ -41,6 +64,12 @@ APK 1.0.7 lama masih memakai alamat repository sebelumnya yang kini private.
 Pengguna versi tersebut perlu memasang 1.1.0 dari tautan di atas sekali. Setelah
 memakai versi ini, update berikutnya bisa diperiksa melalui **Kelola → Versi aplikasi**.
 Versi beta sebelumnya juga dapat ditimpa APK stabil ini tanpa menghapus aplikasi.
+
+Jika **1.1.0 build 16** sudah terpasang, unduh APK dari tautan di atas lalu pilih
+**Update** sekali lagi. Nama versi tetap sama, sehingga updater build lama tidak
+menawarkan perbaikan ini hanya berdasarkan nama versi. APK terbaru memakai build
+17 agar Android mengenalinya sebagai pembaruan. Build 16 lama diarsipkan dengan
+nama file yang menyebut nomor build; pilih file utama `KOZETOON-1.1.0-local.apk`.
 
 ## Mengaktifkan dan memastikan backup
 
@@ -128,7 +157,9 @@ tanpa sengaja menghapus Library, katalog, profil atau file offline.
 **Cek chapter otomatis** aktif secara default, dengan jeda normal enam jam.
 Tarik layar dari posisi paling atas lalu lepaskan, atau tekan **Cek chapter baru**
 di Home / **Update katalog** di Kelola untuk cek manual. Jeda manual 60 detik;
-hasil parsial bisa dilanjutkan setelah 30 menit, kegagalan setelah 15 menit.
+hasil parsial atau proses yang terjeda karena aplikasi masuk latar belakang bisa
+dilanjutkan setelah 30 menit, kegagalan setelah 15 menit. Membuka aplikasi kembali
+tidak memulai ulang pengambilan data ketika jeda tersebut belum terpenuhi.
 
 Satu sesi dibatasi tiga batch, masing-masing hingga 20 metadata judul, 100
 manifest chapter dan 180 detik. Pembacaan tersimpan diprioritaskan. Backlog besar
@@ -146,7 +177,8 @@ dan pemeriksaan chapter terbaru merupakan dua proses yang terpisah.
 
 ## Validasi rilis
 
-149 tes lulus: 60 Python Android, 41 JavaScript, 22 pembaruan sumber dan 26 Java.
+248 tes lulus: 63 Python Android, 49 JavaScript, 110 sumber/CLI (termasuk 25 tes
+pembaruan katalog) dan 26 Java.
 Lint Android: 0 error / 7 warning. APK, modul backup, seed, aset UI, versi dan
 sertifikat diperiksa. Seed tidak berisi bookmark/akun pribadi website.
 
@@ -155,14 +187,23 @@ termasuk alamat gambar bertanda tangan dan integritas relasi database. Tes
 mencakup file rusak, batas ukuran, relasi yang salah, pemulihan data yang belum
 ada pada seed serta pelestarian riwayat/katalog HP yang lebih baru.
 
-Preview daftar chapter dan memori diperiksa pada lebar 320 dan 393 px. Backup
+Preview daftar chapter dan memori diperiksa pada lebar 320 dan 393 px. Banner
+diuji dengan gerakan geser nyata di browser; seluruh slide tetap berada dalam
+satu layout, dan perpindahan memakai transform, bukan pergantian display. Tes
+timer, wrap, jeda, resize dan pembatalan gesture lulus. Tes katalog memastikan
+chapter yang sudah ada tidak diminta ulang, antrean bertahan setelah reopen,
+dan pembukaan ulang aplikasi menghormati jeda. Backup
 pribadi beta sebelumnya telah dilaporkan berhasil oleh pengguna di HP. **Bagian
 backup katalog baru diuji di PC; pemulihan melalui pemilih folder Android pada
 perangkat fisik belum diverifikasi untuk rilis ini.**
 
-Ukuran APK: **136.131.242 byte**.
+Ukuran APK: **136.149.878 byte**.
 
 SHA-256:
-`692c3242383c9bb1c411703dd8b91268a2d50761eb6b84718f4c0de54e86c457`
+`de60c79190d55bbff5ce494ee7abe350bf4904c670945c38c707048256df865b`
 
 ![Preview daftar chapter dengan tanggal](https://github.com/AtillaKuncoroDjati/kozetoon-releases/releases/download/v1.1.0/apk-chapter-dates-110.jpg)
+
+![Banner swipe tanpa tombol pindah](https://github.com/AtillaKuncoroDjati/kozetoon-releases/releases/download/v1.1.0/apk-hero-swipe-110.jpg)
+
+![Penanda selesai dan terakhir dibaca](https://github.com/AtillaKuncoroDjati/kozetoon-releases/releases/download/v1.1.0/apk-read-markers-110.jpg)
