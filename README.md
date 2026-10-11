@@ -1,55 +1,53 @@
 # KOZETOON — Unduhan Android
 
-<!-- kozetoon-build:22 -->
+<!-- kozetoon-build:23 -->
 
-Rilis stabil **1.1.1**, 11 Oktober 2026. Android 7.0 ke atas, ARM64;
-x86_64 tersedia untuk emulator. Kode sumber tetap private. Halaman ini merupakan
-kanal unduhan dan panduan pembaca.
+Rilis stabil **1.1.2**, 12 Oktober 2026. Android 7.0 ke atas, ARM64;
+x86_64 tersedia untuk emulator. Kode sumber tetap private. Kanal ini menyediakan
+APK dan panduan pengguna.
 
-**[Unduh APK terbaru](https://github.com/AtillaKuncoroDjati/kozetoon-releases/releases/download/v1.1.1/KOZETOON-1.1.1-local.apk)**
+**[Unduh APK terbaru](https://github.com/AtillaKuncoroDjati/kozetoon-releases/releases/download/v1.1.2/KOZETOON-1.1.2-local.apk)**
 
 ## Perubahan versi ini
 
-- **Pembuka dengan poster bergerak:** tiga kolom poster bergeser halus dengan arah
-  berbeda di belakang logo K yang tetap diam. Latar gelap menjaga logo mudah
-  dibaca, indikator loading lebih tipis, dan transisi masuk Home lebih lembut.
-- **Tampilan versi lebih bersih:** cukup **1.1.1** pada loading, Kelola, catatan
-  perubahan dan pemberitahuan update. Penyempurnaan versi yang sama tetap dapat
-  diterima melalui Cek update.
-- **Tetap ringan:** memakai sembilan poster lokal yang sama, total sekitar 400 KB.
-  Gambar disiapkan satu kali, bergerak tanpa unduhan internet, lalu dilepas setelah
-  masuk Home. Tidak ada waktu tunggu tambahan untuk memamerkan animasi; gerakan
-  mengikuti pilihan pengurangan animasi di perangkat.
+- **Gambar pulih saat internet kembali.** Halaman yang gagal otomatis dicoba
+  lagi ketika koneksi tersedia atau saat kembali ke reader. Gambar yang sudah
+  tampil tetap dipertahankan. Maksimal dua permintaan berjalan bersama, dengan
+  percobaan terbatas; tombol **Coba lagi** tetap tersedia untuk alamat yang gagal.
+  Jika gambar di atas bacaan pulih dan tinggi halaman berubah, posisi yang sedang
+  dibaca dijaga. Percobaan dihentikan setelah keluar dari chapter.
+- **Lanjut baca lebih pintar.** Setelah chapter selesai, kartu di Home dan Library
+  serta tombol pada detail menawarkan chapter berikutnya. Contoh: **Chapter 98
+  selesai → Lanjut Chapter 99**. Jika chapter berikutnya belum siap, buka detail
+  cerita; urutan chapter tidak dilompati. Jika sudah di chapter terbaru, tampil
+  keterangan menunggu chapter baru. Bacaan yang belum selesai tetap melanjutkan
+  halaman dan posisi terakhir.
+- **Backup lebih jelas.** Kelola menampilkan **Terakhir dicadangkan** beserta tanggal
+  dan jam. Perubahan yang belum tersalin dibedakan dari backup yang sudah berhasil.
+  Kegagalan pribadi maupun katalog tetap ditampilkan setelah aplikasi dibuka ulang,
+  dengan **Coba backup lagi**. Peringatan ringkas juga muncul di Home dan Library.
+  Jika akses folder terputus, pilih **Hubungkan lagi**. Status berhasil hanya muncul
+  setelah file selesai ditulis dan diperiksa.
+- **Folder Library.** Tersedia **Sedang dibaca, Favorit, Baca nanti, Selesai**,
+  serta folder buatan sendiri. Satu cerita dapat masuk beberapa folder. Pencarian,
+  filter status baca dan tampilan grid/daftar tetap tersedia. Folder, nama dan
+  pilihan cerita ikut dicadangkan ke memori lokal. Backup versi sebelumnya tetap
+  dapat dipulihkan; perubahan folder yang lebih baru di HP dipertahankan saat merge.
+- **Update lewat aplikasi.** Pengguna 1.1.0 dan 1.1.1 dapat menerima 1.1.2 melalui
+  **Cek update → Unduh update → Pasang update**. Identitas aplikasi dan sertifikat
+  dipertahankan. Tampilan hanya menyebut **1.1.2**.
 
-- **Nada chapter baru: Level Up.** Audio pilihan pemilik aplikasi, Universfield —
-  Level Up, disertakan lokal dalam APK: sekitar 1,8 detik dan 58 KB. Suara tidak
-  memerlukan internet. Mode hening, volume notifikasi dan pilihan suara di HP
-  tetap berlaku. Pilihan hening atau nada yang sebelumnya diubah tidak dipaksa
-  kembali ke nada baru.
-- **Coba nada langsung:** buka **Kelola → Update & notifikasi → Coba nada Level Up**.
-  Tombol **Atur notifikasi** membuka pengaturan channel chapter favorit di Android
-  8 ke atas. Di Android 7, suara disertakan pada pemberitahuan.
-- **Update langsung dari aplikasi 1.1.0:** nomor versi dinaikkan ke 1.1.1 supaya
-  updater versi 1.1.0 lama yang hanya membandingkan nama versi juga mengenali
-  rilis ini. Unduh dan buka pemasang Android dari KOZETOON, tanpa mencari aset GitHub.
-- **Simpanan dipertahankan ketika update:** package dan sertifikat sama.
-  Pasang sebagai Update tanpa uninstall dahulu.
-
-Semua fitur 1.1.0 tetap tersedia: update favorit terjadwal, notifikasi dengan poster
-kecil dan tombol Baca sekarang, swipe Cerita pilihan, penanda chapter selesai,
-backup lokal pribadi/katalog, poster pembuka bergerak perlahan serta catatan
-perubahan di aplikasi. Kanal rilis tetap rapi: APK dan checksum sebagai aset;
-panduan dan gambar contoh tersimpan dalam dokumentasi.
-
-Download gambar offline tetap dilakukan dengan tombol **Download**. Update
-favorit tidak otomatis mengunduh gambar seluruh chapter ke penyimpanan offline.
+Pembuka tiga kolom poster bergerak dengan logo K diam, nada **Universfield — Level Up**,
+update favorit terjadwal, notifikasi poster, kontrol reader, download offline dan
+backup katalog tetap tersedia. Pemeriksaan chapter tidak otomatis mengunduh gambar
+offline; download gambar tetap melalui tombol **Download**.
 
 ## Cara memasang update
 
-Untuk pengguna **1.1.0 maupun 1.1.1 sebelumnya**:
+Untuk pengguna **1.1.0 atau 1.1.1**:
 
 1. Buka **Kelola → Versi aplikasi → Cek update** dengan internet aktif.
-2. Saat pembaruan **1.1.1** muncul, baca perubahan lalu pilih **Unduh update**.
+2. Saat pembaruan **1.1.2** muncul, baca perubahan lalu pilih **Unduh update**.
 3. Setelah pemeriksaan selesai, pilih **Pasang update** dan konfirmasi **Update/Pasang**
    pada pemasang Android. Berikan izin memasang dari KOZETOON jika Android memintanya.
 4. **Jangan uninstall dahulu.** Bookmark, riwayat, profil, katalog dan file offline
@@ -87,6 +85,40 @@ Mengaktifkan fitur atau mengaktifkan kembali notifikasi tidak membanjiri pembaca
 dengan semua chapter lama. Penanda **chapter baru** di Library berbeda dari
 notifikasi Android: membuka detail atau menghapus notifikasi tidak menghapus
 status belum dibaca. Selesaikan chapter atau pilih **Tandai semua sebagai sudah dibaca**.
+
+## Mengatur folder Library
+
+1. Simpan cerita dengan **Bookmark**, lalu buka **Library**.
+2. Ketuk ikon menu pada kartu cerita → **Atur folder cerita**.
+3. Centang satu atau beberapa folder → **Simpan folder**.
+4. Ketuk nama folder di baris **Folder koleksi** untuk melihat isinya. Geser baris
+   tersebut ke kiri atau kanan untuk menemukan folder lainnya.
+5. Pilih **Atur folder** untuk membuat folder sendiri atau mengubah nama folder pribadi.
+
+Folder dikelola manual agar sesuai pilihan pembaca. Filter **Selesai dibaca** dihitung
+dari progres baca, sedangkan folder **Selesai** berisi cerita yang kamu masukkan sendiri.
+Menghapus folder tidak menghapus cerita, bookmark, riwayat atau download. Menghapus
+bookmark menghapus pilihan folder cerita itu; folder dan riwayat baca tetap tersedia.
+
+![Folder dan kartu Library](docs/screenshots/apk-library-folders-112.png)
+![Memilih beberapa folder untuk cerita](docs/screenshots/apk-folder-picker-112.png)
+
+![Lanjut ke chapter berikutnya](docs/screenshots/apk-continue-next-112.png)
+
+## Memahami status backup
+
+- **Backup tersimpan:** salinan pribadi sudah ditulis dan diverifikasi; lihat tanggal
+  terakhir. Katalog mempunyai waktu pencadangan sendiri di bawahnya.
+- **Perubahan terbaru belum dicadangkan:** ada aktivitas baru yang belum masuk salinan.
+  Tunggu backup otomatis atau tekan **Cadangkan sekarang** sebelum menghapus aplikasi.
+- **Backup belum berhasil:** baca penyebabnya, pastikan ruang penyimpanan cukup,
+  lalu ketuk **Coba backup lagi**. Peringatan hilang setelah penyimpanan berhasil.
+- **Backup perlu akses folder:** pilih **Hubungkan lagi** dan beri akses ke folder
+  yang sama. Berkas di Documents tidak ikut dihapus oleh tombol Putuskan folder.
+
+Folder hanya perlu dipilih saat pertama mengaktifkan backup, atau setelah Android
+menghapus izin karena uninstall/hapus data. Sesudah terhubung, pencadangan berjalan
+otomatis. Backup lokal tidak memberi sinkronisasi antarpengguna dan tidak memakai akun Google.
 
 ## Fitur dan cara memakai KOZETOON
 
@@ -166,23 +198,24 @@ selalu periksa status berhasil sebelum menghapus data aplikasi.
 
 ## Validasi dan file unduhan
 
-**115 tes terkait lulus pada penyempurnaan ini:** 13 Python updater, 67 JavaScript
-dan 35 Java. Lint Android: 0 error, 6 warning. Pengujian meliputi gerak poster sejak
-awal, pergantian strip tanpa loncatan, mode tanpa animasi, penutupan overlay, dan
-deteksi penyempurnaan pada versi yang sama.
+**202 tes terkait lulus:** 89 Python, 78 JavaScript dan 35 Java. Lint Android:
+0 error, 6 warning. Pengujian meliputi pemulihan koneksi, batas percobaan gambar,
+Lanjut baca, migrasi folder, pemulihan backup lama, penggabungan folder, status
+backup dan deteksi update 1.1.2 dari versi sebelumnya.
 
-Preview diperiksa pada 320 × 568, 393 × 851 dan 851 × 393 px. Tiga kolom bergerak,
-logo tetap diam, tidak ada overflow horizontal, dan Home dapat digunakan setelah
-loading. Panel versi tidak menampilkan nomor teknis. Di APK, pembuka ditampilkan
-satu kali oleh Android sehingga tidak ada logo kedua dari WebView.
+Preview mobile diperiksa pada 320 × 568, 393 × 851 dan 851 × 393 px. Pemilihan
+beberapa folder, penyimpanan folder pribadi dan Lanjut baca diuji melalui UI.
+Pemulihan gambar serta tampilan backup diuji dengan data dan koneksi simulasi
+yang terpisah dari simpanan pengguna. Panel versi tidak menampilkan nomor teknis.
 
-Paket, sertifikat, seed, audio dan aset UI sudah diverifikasi. **Animasi dan pemasangan
-APK ini belum diuji pada HP fisik.** Audio Level Up tetap tersedia melalui tombol
+Paket, sertifikat, seed, audio dan aset UI sudah diverifikasi. **Pemasangan,
+pergantian koneksi dan penyimpanan folder APK ini belum diuji pada HP fisik.**
+Audio Level Up tetap tersedia melalui tombol
 Coba nada Level Up di Kelola.
 
-Ukuran APK: **136,990,091 byte**.
+Ukuran APK: **137,011,595 byte**.
 
-SHA-256: `316ca55b46ad3c6fedce36182cf6d5d3e4b8d8a7a332030bb9a625e5bbce6b8a`
+SHA-256: `5afeb4b5253948e741b4c9539f9d162c9538aca739eb4b8a110c2b5a12b834ef`
 
 Audio: **Universfield — Level Up**, file yang diberikan pemilik aplikasi.
 
@@ -191,3 +224,6 @@ Audio: **Universfield — Level Up**, file yang diberikan pemilik aplikasi.
 ![Tampilan versi yang sederhana](https://raw.githubusercontent.com/AtillaKuncoroDjati/kozetoon-releases/main/docs/screenshots/apk-version-clean-111.png)
 
 Gambar merupakan preview UI; animasi native tetap perlu dicoba pada perangkat.
+
+![Peringatan backup dengan data simulasi](docs/screenshots/apk-backup-warning-112.png)
+![Backup tersimpan dengan data simulasi](docs/screenshots/apk-backup-saved-112.png)
