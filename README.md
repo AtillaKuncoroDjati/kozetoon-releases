@@ -8,7 +8,27 @@ publik terpisah.
 
 ## Perubahan versi ini
 
-**Perbaikan 11 Oktober 2026 — versi tetap 1.1.0, build 18:**
+**Tampilan pembuka baru — versi tetap 1.1.0, build 19:**
+
+- **Pembuka edisi 1.1:** tumpukan poster Manga, Manhwa dan Manhua, monogram K
+  besar, aksen ungu, garis panel komik dan
+  tulisan “Cerita baru. Dunia baru.”. Logo masuk dengan gerakan halus, disertai
+  detail sayap K dan garis loading yang bergerak selama aplikasi menyiapkan data.
+- Tampilan muncul sejak awal APK menyiapkan katalog, kemudian memudar ke Home
+  ketika halaman siap. Tidak ada persentase palsu atau durasi tunggu minimum
+  untuk memperpanjang loading. Sembilan thumbnail lokal berjumlah **410.250 byte
+  (sekitar 400 KB)**; background tidak mengunduh poster atau membaca seluruh
+  katalog saat aplikasi dibuka. Bagian tengah digelapkan agar logo tetap jelas.
+- Background Android disiapkan di latar belakang dengan gambar yang diperkecil,
+  lalu digabung menjadi satu bitmap sekitar 680 KB. WebView tidak memuat salinan
+  poster kedua. Background dilepas setelah transisi selesai.
+- Layar pembuka bawaan Android 12 ke atas juga memakai background gelap dan logo KOZETOON
+  yang serasi dengan tampilan aplikasi.
+- Tata letak menyesuaikan layar kecil dan landscape. Animasi dijeda saat aplikasi
+  tidak terlihat, dihentikan setelah pembuka selesai, dan menghormati pengaturan
+  perangkat untuk mengurangi/menonaktifkan animasi.
+
+**Perbaikan sebelumnya pada 11 Oktober 2026 — build 18:**
 
 - **Progres akhir chapter diperbaiki:** membaca sampai gambar terakhir kini
   tercatat penuh, misalnya **26 dari 26** atau **17 dari 17**. Sebelumnya, gambar
@@ -74,7 +94,7 @@ tidak ditampilkan pada detail bacaan. Tidak ada login atau backup Google Drive.
 ## Memasang pembaruan
 
 Unduh APK dan pilih **Update**, menimpa aplikasi lama. Package `id.kozetoon.local`
-dan sertifikat tetap sama; versionCode 18. Seed awal tidak menimpa database lama.
+dan sertifikat tetap sama; versionCode 19. Seed awal tidak menimpa database lama.
 **Jangan uninstall dahulu** agar katalog terbaru, Library dan offline tetap ada.
 Sediakan sedikitnya 1 GB ruang kosong untuk operasi katalog dan backup.
 
@@ -83,10 +103,10 @@ Pengguna versi tersebut perlu memasang 1.1.0 dari tautan di atas sekali. Setelah
 memakai versi ini, update berikutnya bisa diperiksa melalui **Kelola → Versi aplikasi**.
 Versi beta sebelumnya juga dapat ditimpa APK stabil ini tanpa menghapus aplikasi.
 
-Jika **1.1.0 build 16 atau 17** sudah terpasang, unduh APK dari tautan di atas lalu pilih
+Jika **1.1.0 build 16, 17 atau 18** sudah terpasang, unduh APK dari tautan di atas lalu pilih
 **Update** sekali lagi. Nama versi tetap sama, sehingga updater build lama tidak
 menawarkan perbaikan ini hanya berdasarkan nama versi. APK terbaru memakai build
-18 agar Android mengenalinya sebagai pembaruan. Build sebelumnya diarsipkan dengan
+19 agar Android mengenalinya sebagai pembaruan. Build sebelumnya diarsipkan dengan
 nama file yang menyebut nomor build; pilih file utama `KOZETOON-1.1.0-local.apk`.
 
 ## Mengaktifkan dan memastikan backup
@@ -195,6 +215,13 @@ dan pemeriksaan chapter terbaru merupakan dua proses yang terpisah.
 
 ## Validasi rilis
 
+Build 19: **90 tes lulus**, yaitu 64 JavaScript dan 26 Java. Lint Android selesai
+tanpa error. Tes pembuka memeriksa transisi, timer cadangan, pengurangan animasi,
+pelepasan guliran halaman dan pencegahan pembuka berjalan ulang pada navigasi.
+Preview pembuka diperiksa pada 320 × 568, 393 × 851 dan landscape 851 × 393 px;
+Home, guliran dan pencarian dapat dipakai setelah pembuka selesai. Kode backend
+pribadi/katalog tidak berubah pada build ini.
+
 Build 18: **121 tes lulus**, yaitu 65 Python Android dan 56 JavaScript. Regresi
 mencakup gambar terakhir pendek/panjang, akhir canvas/footer, gambar belum siap,
 pembukaan ulang posisi selesai, Home/Library dan round-trip backup penanda selesai.
@@ -219,12 +246,13 @@ backup katalog baru diuji di PC; pemulihan melalui pemilih folder Android pada
 perangkat fisik belum diverifikasi untuk rilis ini.** Perbaikan progres build 18
 diverifikasi pada reader asli Chapter 98 melalui preview mobile 393 px: gambar
 terakhir pendek tercatat 26/26 di Home. Uji ini dilakukan di PC; pengujian fisik
-pada HP pengguna masih diperlukan.
+pada HP pengguna masih diperlukan. Tampilan native pembuka build 19 dikompilasi
+dan diperiksa lint; penilaian animasinya di perangkat fisik masih perlu dilakukan.
 
-Ukuran APK: **136.150.062 byte**.
+Ukuran APK: **136.565.004 byte**.
 
 SHA-256:
-`8e4b2ae5a754ba9e1f6eb48c775dbad05c69e781a86ddd76379fa173d15bf07f`
+`1e79b286d703c87a91d59f8bd533109dc4de23ab86020abf3b5190095eb85df9`
 
 ![Preview daftar chapter dengan tanggal](https://github.com/AtillaKuncoroDjati/kozetoon-releases/releases/download/v1.1.0/apk-chapter-dates-110.jpg)
 
@@ -233,3 +261,5 @@ SHA-256:
 ![Penanda selesai dan terakhir dibaca](https://github.com/AtillaKuncoroDjati/kozetoon-releases/releases/download/v1.1.0/apk-read-markers-110.jpg)
 
 ![Progres halaman terakhir tersimpan penuh](https://github.com/AtillaKuncoroDjati/kozetoon-releases/releases/download/v1.1.0/apk-reader-complete-110.png)
+
+![Pembuka KOZETOON edisi 1.1](https://github.com/AtillaKuncoroDjati/kozetoon-releases/releases/download/v1.1.0/apk-launch-110.png)
