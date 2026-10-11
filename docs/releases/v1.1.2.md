@@ -129,8 +129,8 @@ otomatis. Backup lokal tidak memberi sinkronisasi antarpengguna dan tidak memaka
 | Jelajahi | Cari judul langsung, pilih jenis dan beberapa genre; gunakan grid atau daftar. |
 | Detail cerita | Lihat sinopsis, status, chapter dan tanggal rilis; bookmark, lanjut baca atau download. Tombol Edit cerita tidak ditampilkan. |
 | Daftar chapter | Tanggal baru tampil sebagai menit/jam/hari; chapter lama memakai tanggal. Hijau/centang berarti selesai; ungu menandai posisi terakhir. |
-| Reader | Ketuk gambar untuk menampilkan/menyembunyikan kontrol. Gunakan daftar chapter, pengaturan tampilan dan auto-scroll. Posisi di dalam gambar ikut disimpan. |
-| Library | Bookmark, riwayat, progres dan filter bacaan. Menu cerita bisa menandai selesai atau mengatur notifikasi. |
+| Reader | Ketuk gambar untuk menampilkan/menyembunyikan kontrol. Gunakan daftar chapter, pengaturan tampilan dan auto-scroll. Gambar gagal pulih saat koneksi kembali; posisi di dalam gambar ikut disimpan. |
+| Library | Bookmark, folder, riwayat, progres dan filter bacaan. Menu cerita bisa memilih folder, menandai selesai atau mengatur notifikasi. |
 | Offline | Download manual di detail cerita; chapter dikelompokkan per cerita, bisa dibaca/dihapus. Batas gambar offline 1 GB. |
 | Profil | Ganti nama dan foto dengan crop sebelum disimpan. |
 | Clear cache | Membersihkan cache sementara tanpa menghapus katalog, bookmark, riwayat, profil atau gambar offline. |
@@ -165,13 +165,13 @@ Tidak perlu login Google atau import/export setiap selesai membaca.
 1. Buka **Kelola → Memori KOZETOON → Pilih folder memori**.
 2. Pilih **Documents/Dokumen** dan berikan akses. Aplikasi membuat folder KOZETOON;
    folder KOZETOON yang sudah ada juga dapat dipilih.
-3. Tunggu **Terakhir disimpan** dan **Katalog dicadangkan** menampilkan waktu berhasil.
+3. Tunggu **Terakhir dicadangkan** dan **Katalog dicadangkan** menampilkan waktu berhasil.
 4. Setelah terhubung, perubahan dicadangkan otomatis. **Cadangkan sekarang** dapat
    digunakan untuk memastikan salinan terbaru sebelum uninstall/Hapus data.
 
 | File di Documents/KOZETOON | Isi |
 | --- | --- |
-| kozetoon-memory.json | Bookmark, riwayat, posisi baca, penanda selesai, profil dan pengaturan termasuk pilihan notifikasi. |
+| kozetoon-memory.json | Bookmark, folder Library, riwayat, posisi baca, penanda selesai, profil dan pengaturan termasuk pilihan notifikasi. |
 | kozetoon-memory.previous.json | Salinan pribadi valid sebelumnya. |
 | kozetoon-catalog.jsonl.gz | Katalog terakhir, metadata, daftar chapter, tanggal dan alamat gambar. |
 | kozetoon-catalog.previous.jsonl.gz | Salinan katalog valid sebelumnya. |
@@ -221,7 +221,6 @@ Audio: **Universfield — Level Up**, file yang diberikan pemilik aplikasi.
 
 ![Pembuka dengan poster bergerak dan logo tetap diam](https://raw.githubusercontent.com/AtillaKuncoroDjati/kozetoon-releases/main/docs/screenshots/apk-launch-premium-111.png)
 
-![Tampilan versi yang sederhana](https://raw.githubusercontent.com/AtillaKuncoroDjati/kozetoon-releases/main/docs/screenshots/apk-version-clean-111.png)
 
 Gambar merupakan preview UI; animasi native tetap perlu dicoba pada perangkat.
 
