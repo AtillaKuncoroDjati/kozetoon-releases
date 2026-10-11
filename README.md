@@ -1,59 +1,57 @@
 # KOZETOON — Unduhan Android
 
-<!-- kozetoon-build:20 -->
+<!-- kozetoon-build:21 -->
 
-Rilis stabil **1.1.0 build 20**, 11 Oktober 2026. Android 7.0 ke atas, ARM64;
+Rilis stabil **1.1.1 build 21**, 11 Oktober 2026. Android 7.0 ke atas, ARM64;
 x86_64 tersedia untuk emulator. Kode sumber tetap private. Halaman ini merupakan
 kanal unduhan dan panduan pembaca.
 
-**[Unduh APK terbaru](https://github.com/AtillaKuncoroDjati/kozetoon-releases/releases/download/v1.1.0/KOZETOON-1.1.0-local.apk)**
+**[Unduh APK terbaru](https://github.com/AtillaKuncoroDjati/kozetoon-releases/releases/download/v1.1.1/KOZETOON-1.1.1-local.apk)**
 
 ## Perubahan versi ini
 
-- **Update favorit di latar belakang:** bookmark bisa diperiksa sekitar setiap
-  satu jam, termasuk ketika halaman aplikasi tidak sedang dibuka. Cerita yang
-  sudah terbaru cukup dibandingkan; manifest chapter yang siap tidak diambil ulang.
-- **Notifikasi chapter baru:** judul, nomor chapter dan poster kecil jika berhasil
-  dimuat. Ketuk pemberitahuan untuk membuka detail cerita dan menyorot chapter;
-  tombol **Baca sekarang** membuka chapter tersebut. Beberapa chapter dikelompokkan
-  per cerita, dan beberapa cerita mempunyai ringkasan. Pengiriman dicatat agar
-  chapter yang sama tidak terus diberitahukan.
-- **Pengaturan yang sederhana:** aktifkan update favorit di Kelola, berikan izin
-  notifikasi, dan matikan notifikasi cerita tertentu melalui menu bookmark Library.
-- **Swipe Cerita pilihan diperbaiki:** sentuhan horizontal mengikuti jari dan
-  tidak diambil alih fitur tarik untuk refresh. Swipe bisa mengambil alih transisi
-  otomatis. Banner tetap berganti setiap lima detik; tanpa tombol pindah banner.
-- **Update Library mengikuti bacaan:** penanda chapter baru bertahan sampai
-  chapter selesai dibaca atau ditandai sudah dibaca. Progres disimpan sebelum
-  Home/Library dimuat, sehingga penanda tidak tertinggal karena perpindahan halaman.
-- **Pembaruan APK mengenali build:** build yang lebih tinggi dapat ditawarkan
-  meskipun nama versinya sama-sama 1.1.0. Catatan perubahan tetap tersedia di aplikasi.
-- **Pembuka lebih hidup:** sembilan poster lokal yang sama bergerak perlahan di
-  belakang monogram K. Tidak menambah jumlah poster atau mengambil gambar dari
-  internet saat membuka aplikasi. Animasi mengikuti pengaturan perangkat.
-- **Halaman unduhan dirapikan:** hanya APK terbaru dan checksum yang diunggah
-  sebagai aset rilis. Panduan dan gambar contoh berada di README/dokumentasi.
+- **Nada chapter baru: Level Up.** Audio pilihan pemilik aplikasi, Universfield —
+  Level Up, disertakan lokal dalam APK: sekitar 1,8 detik dan 58 KB. Suara tidak
+  memerlukan internet. Mode hening, volume notifikasi dan pilihan suara di HP
+  tetap berlaku. Pilihan hening atau nada yang sebelumnya diubah tidak dipaksa
+  kembali ke nada baru.
+- **Coba nada langsung:** buka **Kelola → Update & notifikasi → Coba nada Level Up**.
+  Tombol **Atur notifikasi** membuka pengaturan channel chapter favorit di Android
+  8 ke atas. Di Android 7, suara disertakan pada pemberitahuan.
+- **Update langsung dari aplikasi 1.1.0:** nomor versi dinaikkan ke 1.1.1 supaya
+  updater versi 1.1.0 build lama yang hanya membandingkan nama versi juga mengenali
+  rilis ini. Unduh dan buka pemasang Android dari KOZETOON, tanpa mencari aset GitHub.
+- **Simpanan dipertahankan ketika update:** package dan sertifikat sama, dengan
+  nomor build 21. Pasang sebagai Update tanpa uninstall dahulu.
+
+Semua fitur 1.1.0 tetap tersedia: update favorit terjadwal, notifikasi dengan poster
+kecil dan tombol Baca sekarang, swipe Cerita pilihan, penanda chapter selesai,
+backup lokal pribadi/katalog, poster pembuka bergerak perlahan serta catatan
+perubahan di aplikasi. Kanal rilis tetap rapi: APK dan checksum sebagai aset;
+panduan dan gambar contoh tersimpan dalam dokumentasi.
 
 Download gambar offline tetap dilakukan dengan tombol **Download**. Update
 favorit tidak otomatis mengunduh gambar seluruh chapter ke penyimpanan offline.
 
 ## Cara memasang update
 
-1. Unduh file **KOZETOON-1.1.0-local.apk** melalui tautan di atas.
-2. Buka file lalu pilih **Update/Pasang**, menimpa KOZETOON yang sudah ada.
-3. **Jangan uninstall dahulu.** Package dan sertifikat sama; database lama tidak
-   ditimpa seed, sehingga bookmark, riwayat, profil dan file offline dipertahankan.
+Untuk pengguna **1.1.0**, termasuk build 16–19:
 
-Pengguna **1.1.0 build 16–19** perlu memasang build 20 secara manual sekali,
-karena updater lama membandingkan nama versi saja. Mulai build 20, nomor build
-juga dibandingkan sehingga perbaikan 1.1.0 berikutnya dapat terdeteksi di aplikasi.
-APK 1.0.7 yang masih menunjuk repository lama/private juga perlu update manual sekali.
-Beta sebelumnya dapat ditimpa rilis stabil ini. Sediakan sekitar 1 GB ruang kosong
-untuk katalog dan operasi backup.
+1. Buka **Kelola → Versi aplikasi → Cek update** dengan internet aktif.
+2. Saat **1.1.1** muncul, baca perubahan lalu pilih **Unduh update**.
+3. Setelah pemeriksaan selesai, pilih **Pasang update** dan konfirmasi **Update/Pasang**
+   pada pemasang Android. Berikan izin memasang dari KOZETOON jika Android memintanya.
+4. **Jangan uninstall dahulu.** Bookmark, riwayat, profil, katalog dan file offline
+   tetap berada dalam data aplikasi. Tidak ada reset database untuk pembaruan ini.
 
-Untuk pembaruan berikutnya: **Kelola → Versi aplikasi → Cek update → Unduh update →
-Pasang update**. APK diperiksa ukuran, SHA-256, package, nomor build dan sertifikat
-sebelum pemasang Android dibuka. Pemasangan selalu memerlukan pilihan pengguna.
+Jika baru saja menekan Cek update, tunggu sekitar satu menit sebelum mencoba lagi.
+Pemeriksaan otomatis mempunyai jeda enam jam; tombol Cek update meminta pengecekan
+manual. APK diperiksa ukuran, SHA-256, package, nomor build dan sertifikat sebelum
+pemasang Android dibuka. Pemasangan tetap memerlukan pilihan pengguna.
+
+Pengguna 1.0.7 yang masih menunjuk repository lama/private perlu memasang APK terbaru
+secara manual satu kali dari tautan di atas. Setelah itu updater memakai kanal publik.
+Sediakan sekitar 1 GB ruang kosong untuk katalog dan operasi backup.
 
 ## Mengikuti chapter favorit
 
@@ -157,28 +155,22 @@ selalu periksa status berhasil sebelum menghapus data aplikasi.
 
 ## Validasi dan file unduhan
 
-**168 tes lulus:** 73 Python Android, 66 JavaScript dan 29 Java. Lint Android:
-0 error, 6 warning. Pengujian meliputi chapter baru/gagal/siap, pencegahan notifikasi
-ulang, mute, penghentian sebelum restore, backup lama, nomor build yang sama,
-gesture sentuhan/pembatalan, autoplay dan progres penuh.
+**172 tes lulus:** 74 Python Android, 66 JavaScript dan 32 Java. Lint Android:
+0 error, 6 warning. Pengujian mencakup versi 1.1.1 dari updater 1.1.0, pemilihan
+nada baru, pelestarian pilihan hening/nada pengguna, serta pengujian fitur sebelumnya.
 
-Preview diperiksa pada 320 × 568, 393 × 851 dan 851 × 393 px. Swipe manual maju
-satu slide, link notifikasi menyorot chapter, dan chapter contoh yang selesai
-tercatat 2/2 sebelum kembali ke Home, tanpa Update Library tertinggal. Paket,
-sertifikat yang sama, seed, aset UI dan integritas APK diperiksa. Seed tidak
-memuat simpanan pribadi. **Pengiriman notifikasi, jadwal Android ketika aplikasi
-tertutup dan animasi native belum diuji pada HP fisik; pengujian pengguna masih diperlukan.**
+Panel baru diperiksa pada lebar 320 dan 393 px tanpa overflow horizontal.
+APK diverifikasi: audio identik dengan file MP3 yang diberikan, seed terpasang,
+aset UI sesuai sumber, package tetap sama, nomor build naik dan sertifikat sama.
+**Bunyi notifikasi, pemasangan dan perilaku jadwal di HP fisik belum diuji dalam
+pengujian PC ini.** Gunakan Coba nada Level Up setelah memasang update.
 
-Nomor build: **20**. Ukuran APK: **136.931.723 byte**.
+Nomor build: **21**. Ukuran APK: **136,990,595 byte**.
 
-SHA-256: `0ca6f61d2a5e31cedbc10ba4f214e3823cd6b7b87e3f542c651ddf430203b1cd`
+SHA-256: `c58655ff9615688b0919a188962aeffb7269c820a24d4aa226145f234422cab8`
 
-![Pengaturan update favorit](https://raw.githubusercontent.com/AtillaKuncoroDjati/kozetoon-releases/main/docs/screenshots/apk-favorite-settings-110.png)
+Audio: **Universfield — Level Up**, file yang diberikan pemilik aplikasi.
 
-![Pembuka dengan poster bergerak perlahan](https://raw.githubusercontent.com/AtillaKuncoroDjati/kozetoon-releases/main/docs/screenshots/apk-launch-motion-110.png)
+![Panel nada notifikasi](https://raw.githubusercontent.com/AtillaKuncoroDjati/kozetoon-releases/main/docs/screenshots/apk-sound-111.png)
 
-![Tanggal rilis pada chapter](https://raw.githubusercontent.com/AtillaKuncoroDjati/kozetoon-releases/main/docs/screenshots/apk-chapter-dates-110.jpg)
-
-![Penanda bacaan](https://raw.githubusercontent.com/AtillaKuncoroDjati/kozetoon-releases/main/docs/screenshots/apk-read-markers-110.jpg)
-
-![Progres penuh di Home](https://raw.githubusercontent.com/AtillaKuncoroDjati/kozetoon-releases/main/docs/screenshots/apk-reader-complete-110.png)
+Gambar merupakan preview browser; tombol nada dan izin Android aktif di APK.
