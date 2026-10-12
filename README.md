@@ -1,9 +1,9 @@
 # KOZETOON — Unduhan Android
 
-<!-- kozetoon-build:24 -->
+<!-- kozetoon-build:25 -->
 
 Rilis stabil pengganti **1.1.2**, 12 Oktober 2026. Versi ini memakai kembali dasar
-**1.1.1**, dengan dua tambahan: progres backup dan foto profil GIF yang bisa di-crop.
+**1.1.1**, dengan progres backup, foto profil GIF yang bisa di-crop, dan notifikasi versi baru.
 Android 7.0 ke atas, ARM64; x86_64 tersedia untuk emulator. Kode sumber tetap private.
 
 **[Unduh APK terbaru](https://github.com/AtillaKuncoroDjati/kozetoon-releases/releases/download/v1.1.2/KOZETOON-1.1.2-local.apk)**
@@ -27,6 +27,13 @@ Android 7.0 ke atas, ARM64; x86_64 tersedia untuk emulator. Kode sumber tetap pr
   Gunakan foto dan Simpan profil. GIF tetap bergerak pada profil dan top bar;
   urutan frame, durasi dan pengulangan aslinya dipertahankan. Foto JPG, PNG dan
   WebP masih dapat digunakan. Profil GIF ikut backup lokal.
+- **Notifikasi versi baru KOZETOON.** Pemeriksaan rilis berjalan di latar belakang
+  sekitar setiap 6 jam saat ada internet dan baterai tidak rendah. Notifikasi juga
+  mengenali penyempurnaan dengan nomor versi yang sama. Ketuk **Lihat update** untuk
+  menuju panel pembaruan di aplikasi, membaca catatan perubahan dan mengunduh APK.
+  Setiap rilis hanya diberitahukan satu kali; menutup notifikasinya tidak menyebabkan
+  pemberitahuan yang sama muncul berulang. Notifikasi chapter tetap diatur terpisah.
+  Nada bawaan Level Up mengikuti pilihan hening, volume dan pengaturan HP.
 - **Update melalui aplikasi.** Pengguna 1.1.2 yang sebelumnya tetap bisa menerima
   APK pengganti dari Cek update. Nomor versi yang terlihat tetap **1.1.2**.
   Pilih Update/Pasang, tanpa uninstall terlebih dahulu.
@@ -42,6 +49,23 @@ Android 7.0 ke atas, ARM64; x86_64 tersedia untuk emulator. Kode sumber tetap pr
 Untuk pengguna 1.0.7 yang updater-nya masih mengarah ke repository lama yang private,
 unduh APK di atas dan pasang menimpa aplikasi sekali. Updater versi selanjutnya
 menggunakan kanal publik ini. Jangan uninstall atau Hapus data untuk memasang update.
+
+## Mengaktifkan notifikasi versi baru
+
+Buka **Kelola → Versi aplikasi**, aktifkan **Beri tahu saat ada versi baru KOZETOON**.
+Jika izin belum aktif, ketuk **Izinkan notifikasi pembaruan** dan setujui dialog Android.
+Pengguna yang sudah memberikan izin notifikasi chapter memakai izin aplikasi yang sama;
+kategori **Pembaruan aplikasi** memiliki pengaturan tersendiri.
+
+Contoh pemberitahuan: **KOZETOON 1.1.3 sudah tersedia**. Keterangan:
+**Ketuk untuk melihat perubahan dan memperbarui aplikasi.** Tombol: **Lihat update**.
+Nomor 1.1.3 hanya contoh untuk rilis mendatang, bukan rilis saat ini.
+
+Pemeriksaan ini mengambil metadata rilis, bukan APK atau chapter. Untuk memasang,
+pilih Unduh update lalu Pasang update sendiri. Jadwal dapat terlambat karena
+penghematan baterai, pembatasan Android atau koneksi. Jika aplikasi di-Force stop,
+buka kembali agar pekerjaan terjadwal dapat berjalan lagi. Gunakan Cek update
+untuk memeriksa sekarang. Pilihan notifikasi versi baru ikut backup lokal.
 
 ## Backup lokal dan pemulihan
 
@@ -118,11 +142,13 @@ Proses native Android perlu diuji pada HP pengguna.
 
 ![Crop GIF profil](docs/screenshots/apk-gif-crop-112.png)
 
+![Pengaturan notifikasi versi baru](docs/screenshots/apk-version-notifications-112.png)
+
 ## Informasi APK dan pengujian
 
-- Ukuran: 137018423 byte, sekitar 130.7 MiB. Katalog awal: 1.572 cerita / 149.626 chapter.
+- Ukuran: 137019207 byte, sekitar 130.7 MiB. Katalog awal: 1.572 cerita / 149.626 chapter.
 - Package: id.kozetoon.local. Sertifikat sama dengan versi sebelumnya.
-- SHA-256: `3ba1196a7d4be8d4e04d82f55540a9c210fb77697fe4f0e31ad2b97a6e2cdc46`.
+- SHA-256: `5d7ae9f5a74af33d4f739bcf6ff9d48c1c640e5c7d47d6ffb10afc3859d67ac5`.
 - Pengujian backup/GIF, migrasi data dan updater dijalankan di PC. GIF hasil crop
   diperiksa dengan decoder terpisah, termasuk durasi, pengulangan dan disposal frame.
 - UI diuji pada 320 × 568 dan 393 × 851. APK, seed, audio, sembilan poster dan
